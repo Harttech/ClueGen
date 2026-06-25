@@ -1,16 +1,14 @@
-﻿using System;
+﻿using ClueGen.Framework.Models.People;
 
 namespace ClueGen.Framework.Models.Clues
 {
-    public class PersonAccountClue : ClueBase
+    public class PersonAccountClue : ClueBase<Person>
     {
-        public PersonAccountClue(string displayName, Guid personId, Statement statement, params string[] descriptiveElements) : base(displayName, ClueKind.PersonAccount, descriptiveElements)
+        public PersonAccountClue(string displayName, Person clueHolder, Statement statement, params string[] descriptiveElements) : base(displayName, ClueKind.PersonAccount, clueHolder, descriptiveElements)
         {
-            PersonId = personId;
             Statement = statement;
         }
-        
-        public Guid PersonId { get; }
+
         public Statement Statement { get; }
     }
 }

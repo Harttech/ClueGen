@@ -1,5 +1,5 @@
-﻿using System;
-using ClueGen.Framework.Models.People;
+﻿using ClueGen.Framework.Models.People;
+using System;
 
 namespace ClueGen.Framework.Models.Clues
 {
@@ -11,11 +11,15 @@ namespace ClueGen.Framework.Models.Clues
             Clue = clue;
             ClueStatement = clueStatement;
         }
-        
-        public Statement(string displayName, Testimony parent, Mood mood, Statement nextStatement, params string[] descriptiveElements) : base(displayName, parent, descriptiveElements)
+
+        public Statement(string displayName, Testimony parent, Mood mood, Statement nextStatement, params string[] descriptiveElements) : this(displayName, parent, mood, descriptiveElements)
+        {
+            NextStatement = nextStatement;
+        }
+
+        public Statement(string displayName, Testimony parent, Mood mood, params string[] descriptiveElements) : base(displayName, parent, descriptiveElements)
         {
             Mood = mood;
-            NextStatement = nextStatement;
         }
 
         public Mood Mood { get; }

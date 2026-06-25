@@ -1,8 +1,8 @@
 ﻿namespace ClueGen.Framework.Models.Clues
 {
-    public class GenericClue : ClueBase
+    public class GenericClue<T> : ClueBase<T> where T : CaseObjectBase
     {
-        public GenericClue(string displayName, params string[] descriptiveElements) : base(displayName, ClueKind.Generic, descriptiveElements)
+        public GenericClue(string displayName, T clueHolder, params string[] descriptiveElements) : base(displayName, ClueKind.Generic, clueHolder, descriptiveElements)
         {
         }
     }

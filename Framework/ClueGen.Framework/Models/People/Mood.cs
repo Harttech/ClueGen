@@ -7,6 +7,7 @@
         Neutral,
         Sad,
         Scared,
-        Nervous
+        Nervous,
+        Dead
     }
 }

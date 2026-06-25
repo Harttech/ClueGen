@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Tests/GenTest/GenTest.csproj" Id="85324023-87f3-40d6-87cf-391ad51483af" />
+  <Project Path="ClueGen.Framework/ClueGen.Framework.csproj" Id="df03c7ec-9bad-41bd-9a6c-4f71ef9109f8" />
+</Solution>

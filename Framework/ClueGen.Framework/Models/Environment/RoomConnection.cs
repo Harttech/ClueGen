@@ -1,11 +1,14 @@
 ﻿namespace ClueGen.Framework.Models.Environment
 {
-    public class RoomConnection : CaseContainerChildBase<Room>
+    public class RoomConnection : CaseObjectBase
     {
-        public RoomConnection(string displayName, Room parent, params string[] descriptiveElements) : base(displayName, parent, descriptiveElements)
+        public RoomConnection(string displayName, Room connectsTo, bool discovered, params string[] descriptiveElements) : base(displayName, descriptiveElements)
         {
+            ConnectsTo = connectsTo;
+            Discovered = discovered;
         }
 
-        public bool Discovered { get; set; }
+        public Room ConnectsTo { get; }
+        public bool Discovered { get; }
     }
 }

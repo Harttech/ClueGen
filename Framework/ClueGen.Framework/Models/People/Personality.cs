@@ -16,6 +16,5 @@
         public byte Extraversion { get; }
         public byte Agreeableness { get; }
         public byte Neuroticism { get; }
-
     }
 }

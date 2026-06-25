@@ -11,7 +11,7 @@ namespace ClueGen.Framework.Models.Actions
         Guid LocationId { get; }
     }
 
-    public interface IPersonAction<out TTarget> : IPersonAction where TTarget: ICaseObject
+    public interface IPersonAction<out TTarget> : IPersonAction where TTarget : ICaseObject
     {
         TTarget TargetOfAction { get; }
     }

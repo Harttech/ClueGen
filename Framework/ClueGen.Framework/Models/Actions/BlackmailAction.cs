@@ -1,5 +1,5 @@
-﻿using System;
-using ClueGen.Framework.Models.People;
+﻿using ClueGen.Framework.Models.People;
+using System;
 
 namespace ClueGen.Framework.Models.Actions
 {
